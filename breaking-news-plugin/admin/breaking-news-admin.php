@@ -74,8 +74,10 @@ class Breaking_News_Admin
         $breaking_news = get_post_meta($post->ID, 'breaking_news', true);
 
         $checkbox = '<input type="checkbox" id="breaking_news" name="breaking_news" value="1"';
-        if ($breaking_news) $checkbox .= 'checked="checked" ';
-        $checkbox.= '></input><label for="breaking_news">Woa! this is Breaking News</label>';
+        if ($breaking_news) {
+            $checkbox .= 'checked="checked" ';
+        }
+        $checkbox .= '></input><label for="breaking_news">Woa! this is Breaking News</label>';
         echo $checkbox;
     }
 

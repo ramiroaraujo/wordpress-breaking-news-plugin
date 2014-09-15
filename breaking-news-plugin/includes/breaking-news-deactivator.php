@@ -20,17 +20,19 @@
  * @subpackage Breaking_News/includes
  * @author     Your Name <email@example.com>
  */
-class Breaking_News_Deactivator {
+class Breaking_News_Deactivator
+{
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function deactivate() {
+    /**
+     * Short Description. (use period)
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function deactivate()
+    {
 
-	}
+    }
 
 }

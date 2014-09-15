@@ -20,17 +20,19 @@
  * @subpackage Breaking_News/includes
  * @author     Your Name <email@example.com>
  */
-class Breaking_News_Activator {
+class Breaking_News_Activator
+{
 
-	/**
-	 * Short Description. (use period)
-	 *
-	 * Long Description.
-	 *
-	 * @since    1.0.0
-	 */
-	public static function activate() {
+    /**
+     * Short Description. (use period)
+     *
+     * Long Description.
+     *
+     * @since    1.0.0
+     */
+    public static function activate()
+    {
 
-	}
+    }
 
 }

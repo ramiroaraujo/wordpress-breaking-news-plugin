@@ -22,31 +22,31 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+if (!defined('WPINC')) {
+    die;
 }
 
 /**
  * The code that runs during plugin activation.
  */
-require_once plugin_dir_path( __FILE__ ) . 'includes/breaking-news-activator.php';
+require_once plugin_dir_path(__FILE__) . 'includes/breaking-news-activator.php';
 
 /**
  * The code that runs during plugin deactivation.
  */
-require_once plugin_dir_path( __FILE__ ) . 'includes/breaking-news-deactivator.php';
+require_once plugin_dir_path(__FILE__) . 'includes/breaking-news-deactivator.php';
 
 /** This action is documented in includes/breaking-news-activator.php */
-register_activation_hook( __FILE__, array( 'Breaking_News_Activator', 'activate' ) );
+register_activation_hook(__FILE__, array('Breaking_News_Activator', 'activate'));
 
 /** This action is documented in includes/breaking-news-deactivator.php */
-register_deactivation_hook( __FILE__, array( 'Breaking_News_Deactivator', 'deactivate' ) );
+register_deactivation_hook(__FILE__, array('Breaking_News_Deactivator', 'deactivate'));
 
 /**
  * The core plugin class that is used to define internationalization,
  * dashboard-specific hooks, and public-facing site hooks.
  */
-require_once plugin_dir_path( __FILE__ ) . 'includes/breaking-news.php';
+require_once plugin_dir_path(__FILE__) . 'includes/breaking-news.php';
 
 /**
  * Begins execution of the plugin.
@@ -57,10 +57,12 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/breaking-news.php';
  *
  * @since    1.0.0
  */
-function run_breaking_news() {
+function run_breaking_news()
+{
 
-	$plugin = new Breaking_News();
-	$plugin->run();
+    $plugin = new Breaking_News();
+    $plugin->run();
 
 }
+
 run_breaking_news();
