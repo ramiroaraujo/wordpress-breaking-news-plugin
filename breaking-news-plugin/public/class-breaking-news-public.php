@@ -3,7 +3,7 @@
 /**
  * The public-facing functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://github.com/ramiroaraujo/wordpress-breaking-news-plugin
  * @since      1.0.0
  *
  * @package    Breaking_News
@@ -54,6 +54,12 @@ class Breaking_News_Public
         $this->version = $version;
     }
 
+    /**
+     * Prepends the "Breaking" text to the title if the post is marked as breaking_news
+     *
+     * @param $title
+     * @return string
+     */
     public function prepend_breaking_news($title)
     {
         if (get_post_meta(get_the_ID(), 'breaking_news', true)) {

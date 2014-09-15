@@ -3,7 +3,7 @@
 /**
  * The dashboard-specific functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://github.com/ramiroaraujo/wordpress-breaking-news-plugin
  * @since      1.0.0
  *
  * @package    Breaking_News
@@ -55,7 +55,10 @@ class Breaking_News_Admin
 
     }
 
-    public function add_notice_metabox()
+    /**
+     * Creates the meta_box for the admin area
+     */
+    public function add_breaking_news_meta_box()
     {
         add_meta_box(
             'breaking_news',
@@ -67,12 +70,17 @@ class Breaking_News_Admin
         );
     }
 
+    /**
+     * Creates the checkbox in the meta_box, for storing the metadata
+     * @param $post
+     */
     function breaking_news_display($post)
     {
         wp_nonce_field(plugin_basename(__FILE__), 'breaking_news_nonce');
 
         $breaking_news = get_post_meta($post->ID, 'breaking_news', true);
 
+        //lacking a better templating method, plain-old HTML stitching here
         $checkbox = '<input type="checkbox" id="breaking_news" name="breaking_news" value="1"';
         if ($breaking_news) {
             $checkbox .= 'checked="checked" ';
@@ -81,34 +89,28 @@ class Breaking_News_Admin
         echo $checkbox;
     }
 
+    /**
+     * Validates and saves the metadata
+     * @param $post_id
+     */
     function save_breaking_news($post_id)
     {
         if (isset($_POST['breaking_news_nonce']) && isset($_POST['post_type'])) {
 
-            // Don't save if the user hasn't submitted the changes
-            if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
-                return;
-            }
-
-            // Verify that the input is coming from the proper form
+            //verify that the input is coming from the proper form
             if (!wp_verify_nonce($_POST['breaking_news_nonce'], plugin_basename(__FILE__))) {
                 return;
             }
 
-            // Make sure the user has permissions to post
+            //make sure the user has permissions to post
             if ($_POST['post_type'] == 'post') {
                 if (!current_user_can('edit_post', $post_id)) {
                     return;
                 }
             }
 
-            // Read the post message
+            //read the post message
             $breaking_news = isset($_POST['breaking_news']) ? $_POST['breaking_news'] : '';
-
-            // If the value for the post message exists, delete it first. Don't want to write extra rows into the table.
-            if (count(get_post_meta($post_id, 'breaking_news')) == 0) {
-                delete_post_meta($post_id, 'breaking_news');
-            }
 
             // Update it for this post.
             update_post_meta($post_id, 'breaking_news', $breaking_news);

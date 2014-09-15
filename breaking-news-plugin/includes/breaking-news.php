@@ -6,7 +6,7 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the dashboard.
  *
- * @link       http://example.com
+ * @link       https://github.com/ramiroaraujo/wordpress-breaking-news-plugin
  * @since      1.0.0
  *
  * @package    Breaking_News
@@ -169,7 +169,7 @@ class Breaking_News
 
         $plugin_admin = new Breaking_News_Admin($this->get_plugin_name(), $this->get_version());
 
-        $this->loader->add_action('add_meta_boxes', $plugin_admin, 'add_notice_metabox');
+        $this->loader->add_action('add_meta_boxes', $plugin_admin, 'add_breaking_news_meta_box');
         $this->loader->add_action('save_post', $plugin_admin, 'save_breaking_news');
     }
 

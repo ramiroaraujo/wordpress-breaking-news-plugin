@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that its ready for translation.
  *
- * @link       http://example.com
+ * @link       https://github.com/ramiroaraujo/wordpress-breaking-news-plugin
  * @since      1.0.0
  *
  * @package    Breaking_News

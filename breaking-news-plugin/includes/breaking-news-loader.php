@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       https://github.com/ramiroaraujo/wordpress-breaking-news-plugin
  * @since      1.0.0
  *
  * @package    Breaking_News
