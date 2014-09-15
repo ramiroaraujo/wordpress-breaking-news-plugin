@@ -26,7 +26,6 @@
  */
 class Breaking_News_i18n
 {
-
     /**
      * The domain specified for this plugin.
      *
