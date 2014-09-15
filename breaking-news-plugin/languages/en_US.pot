@@ -1,0 +1,45 @@
+# Copyright (C) 2014 Breaking News
+# This file is distributed under the same license as the Breaking News package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Breaking News 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/breaking-news-"
+"plugin\n"
+"POT-Creation-Date: 2014-09-15 03:20:01+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-09-15 00:26-0300\n"
+"Last-Translator: Ramiro Araujo <rama.araujo@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.5\n"
+
+#. #-#-#-#-#  breaking-news-plugin.pot (Breaking News 1.0.0)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: admin/breaking-news-admin.php:65
+msgid "Breaking News"
+msgstr "Breaking News"
+
+#: admin/breaking-news-admin.php:89
+msgid "Woa! this is Breaking News"
+msgstr "Woa! this is Breaking News"
+
+#: public/class-breaking-news-public.php:66
+msgid "Breaking"
+msgstr "Breaking"
+
+#. Plugin URI of the plugin/theme
+msgid "https://github.com/ramiroaraujo/wordpress-breaking-news-plugin"
+msgstr "https://github.com/ramiroaraujo/wordpress-breaking-news-plugin"
+
+#. Description of the plugin/theme
+msgid "Demo plugin for testing"
+msgstr "Demo plugin for testing"
+
+#. Author of the plugin/theme
+msgid "Ramiro Araujo"
+msgstr "Ramiro Araujo"
+
+#. Author URI of the plugin/theme
+msgid "http://ramiroaraujo.tumblr.com"
+msgstr "http://ramiroaraujo.tumblr.com"

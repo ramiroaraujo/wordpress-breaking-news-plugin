@@ -63,7 +63,7 @@ class Breaking_News_Public
     public function prepend_breaking_news($title)
     {
         if (get_post_meta(get_the_ID(), 'breaking_news', true)) {
-            $title = 'Breaking: ' . $title;
+            $title = __('Breaking', 'breaking-news') . ': ' . $title;
         }
 
         return $title;

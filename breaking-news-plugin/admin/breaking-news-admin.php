@@ -85,7 +85,9 @@ class Breaking_News_Admin
         if ($breaking_news) {
             $checkbox .= 'checked="checked" ';
         }
-        $checkbox .= '></input><label for="breaking_news">Woa! this is Breaking News</label>';
+        $checkbox .= '></input><label for="breaking_news">' .
+            __('Woa! this is Breaking News', 'breaking-news') .
+            '</label>';
         echo $checkbox;
     }
 
